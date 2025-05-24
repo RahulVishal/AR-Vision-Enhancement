@@ -4,14 +4,12 @@ from gi.repository import Gst, GLib, GstApp
 import numpy as np
 import cv2
 import gc
+from load import process_frame
 
 # Initialize GStreamer
 Gst.init(None)
 
-# Custom image processing function (modify this)
-def process_frame(frame):
-    # Example: Convert to grayscale
-    return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+disease_name = ['not_disease', 'rp', 'tv', 'md', 'cb']
 
 # GStreamer pipeline with appsink
 pipeline_str = (
