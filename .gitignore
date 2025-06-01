@@ -1,3 +1,18 @@
 # Ignore videos and outputs directories
 videos/
 outputs/
+image copy.png
+image.png
+outputs copy/1.mp4
+outputs copy/3.mp4
+outputs1/blind_spots.png
+outputs1/cataracts.png
+outputs1/color_blind.png
+outputs1/diabetic_retinopathy.png
+outputs1/macular_degeneration.png
+outputs1/night_blindness.png
+outputs1/rp_dark.png
+outputs1/rp_light.png
+outputs1/tunnel_vision.png
+videos copy/1.mp4
+videos copy/3.mp4
