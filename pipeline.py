@@ -4,12 +4,13 @@ from gi.repository import Gst, GLib, GstApp
 import numpy as np
 import cv2
 import gc
-from load import process_frame
+from router import router
 
 # Initialize GStreamer
 Gst.init(None)
 
-disease_name = ['not_disease', 'rp', 'tv', 'md', 'cb']
+disease_name = ['not_disease', 'rp', 'tv', 'cb'][1]
+sim_disease = False
 
 # GStreamer pipeline with appsink
 pipeline_str = (
@@ -43,7 +44,7 @@ def on_new_sample(sink):
         buf.unmap(map_info)
 
         # Apply custom image processing
-        processed = process_frame(frame)
+        processed = router(frame, disease_name, sim_disease)
 
         # Show the result (optional)
         cv2.imshow("Processed Frame", processed)
